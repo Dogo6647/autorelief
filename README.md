@@ -20,7 +20,7 @@ debian-ubuntu
 
 ## Running Autorelief
 The building process should finish almost instantly. After the building process
-finishes, you can run autorelief by running
+finishes, you can run autorelief by running the command
 
 `autorelief` or `autorelief-config`
 

@@ -1,0 +1,12 @@
+#!/bin/bash
+cd ..
+cd ..
+cd src
+echo "Installing to /usr/local/bin..."
+sudo cp autorelief /usr/local/bin
+sudo cp autorelief-config /usr/local/bin
+
+echo "Copying cfgs to $HOME..."
+cp -r ar-cfgs ~
+
+echo "Job's done!"

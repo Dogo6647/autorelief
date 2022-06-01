@@ -1,0 +1,16 @@
+#!/bin/bash
+cd ~
+echo Checking if requirements are installed...
+sudo apt-get install xdotool
+sudo apt-get install zenity
+clear
+
+zenity --notification --text="Autorelief is now running..."
+KEYBIND=$(cat ar-cfgs/keybind.cfg)
+KEYINTV=$(cat ar-cfgs/keyintv.cfg)
+
+while :
+do
+	xdotool key $KEYBIND
+	sleep $KEYINTV
+done

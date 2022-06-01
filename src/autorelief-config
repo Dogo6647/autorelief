@@ -1,0 +1,14 @@
+#!/bin/bash
+cd ~
+echo Checking if requirements are installed...
+sudo apt-get install xdotool
+sudo apt-get install zenity
+clear
+
+#Main UI
+zenity --entry --text="Keyboard shortcut for saving" --entry-text=ctrl+s > ar-cfgs/keybind.cfg
+zenity --entry --text="Save interval (secs)" --entry-text=60 > ar-cfgs/keyintv.cfg
+KEYBIND=$(cat ar-cfgs/keybind.cfg)
+KEYINTV=$(cat ar-cfgs/keyintv.cfg)
+
+autorelief
